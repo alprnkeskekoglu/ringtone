@@ -57,7 +57,7 @@
                url: "{{route('credit')}}",
                data: {'_token': "{{csrf_token()}}", 'credit': credit},
                success: function(result) {
-                    //window.location.href = "{{route('profile')}}"
+                    window.location.href = "{{route('profile')}}"
                }
            })
         });
