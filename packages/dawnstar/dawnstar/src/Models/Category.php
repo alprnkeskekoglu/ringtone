@@ -26,7 +26,7 @@ class Category extends Model
         return $this->hasMany(Tag::class);
     }
     public function children() {
-        return $this->hasMany(Category::class, 'id', 'parent_id');
+        return $this->hasMany(Category::class, 'parent_id', 'id');
     }
     public function parent() {
         return $this->belongsTo(Category::class, 'parent_id', 'id');
