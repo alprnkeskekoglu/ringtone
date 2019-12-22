@@ -42,6 +42,12 @@ class RingtoneController extends Controller
             $file->storeAs('ringtones', $fileName);
             $data['file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
         }
+        $file = request()->file('demo_file');
+        if ($file != null) {
+            $fileName = uniqid() . "-" . $file->getClientOriginalName();
+            $file->storeAs('ringtones', $fileName);
+            $data['demo_file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
+        }
         $ringtone = Ringtone::firstOrCreate(
             $data
         );
@@ -83,6 +89,12 @@ class RingtoneController extends Controller
             $fileName = uniqid() . "-" . $file->getClientOriginalName();
             $file->storeAs('ringtones', $fileName);
             $data['file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
+        }
+        $file = request()->file('demo_file');
+        if ($file != null) {
+            $fileName = uniqid() . "-" . $file->getClientOriginalName();
+            $file->storeAs('ringtones', $fileName);
+            $data['demo_file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
         }
 
         $ringtone->update($data);
