@@ -1,0 +1,128 @@
+.music-list li {
+    display: inline-block;
+    margin-top: 26px;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    padding: 22.5px 13px 25.5px 91px;
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    overflow: hidden;
+    transition: .6s ease all;
+    min-width: 290px;
+}
+.ringtone li {
+    min-width: 260px;
+}
+
+.music-list li .small {
+    transition: .6s ease all;
+}
+
+.music-list li h5 {
+    letter-spacing: 0em;
+}
+
+.music-list li > i.cart-button {
+    cursor: pointer;
+}
+
+.music-list li > i.play-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    bottom: 0;
+    width: 56px;
+    padding-left: 17px;
+    line-height: 56px;
+    text-align: center;
+    color: #0665d0;
+    font-size: 56px;
+    transition: .6s ease all;
+    cursor: pointer;
+}
+
+.parallax {
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-black-75 {
+    min-height: 500px;
+}
+
+.footer-menu {
+    float: left;
+    width: 100%;
+    padding: 45px 65px;
+}
+
+footer .footer-menu ul li a {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: block;
+    font: 18px "pf_din_text_comp_prolight";
+    color: #A1A1A1;
+    padding: 4px 0;
+    float: left;
+    text-decoration: none;
+}
+
+.footer-menu ul li.head {
+    font: 16px "pf_din_text_comp_proregular";
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #535355;
+    margin: 0 0 18px 0;
+    letter-spacing: 1px;
+}
+
+.footer-menu ul li {
+    float: left;
+    width: 100%;
+    list-style-type: none;
+}
+
+.footer-menu ul {
+    float: left;
+    width: 25%;
+}
+
+.address em {
+    font: 25px "playfair_displaybold";
+    color: #535355;
+    float: left;
+    width: 100%;
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0 0 10px 0;
+}
+.address ul {
+    padding: 20px 0;
+    margin: 0;
+    border-top: 1px solid #DDDDDD;
+    width: 80%;
+    float: left;
+}
+.address ul li {
+    font: 16px/25px "pf_din_text_comp_prolight";
+    color: #A1A1A1;
+    letter-spacing: 1px;
+    padding: 4px 0;
+    list-style-type: none;
+}
+
+.address ul li span {
+    color: #535355;
+    font: 16px "pf_din_text_comp_probold";
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-right: 5px;
+}
