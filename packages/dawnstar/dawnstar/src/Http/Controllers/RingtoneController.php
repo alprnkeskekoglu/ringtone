@@ -33,21 +33,22 @@ class RingtoneController extends Controller
 
     public function store()
     {
-        $data = request()->except(['_token', 'file']);
+        $data = request()->except(['_token', 'file', 'demo_file']);
 
 
         $file = request()->file('file');
         if ($file != null) {
-            $fileName = uniqid() . "-" . $file->getClientOriginalName();
+            $fileName = uniqid() . "-" . str_replace(' ', '-', $file->getClientOriginalName());
             $file->storeAs('ringtones', $fileName);
             $data['file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
         }
         $file = request()->file('demo_file');
         if ($file != null) {
-            $fileName = uniqid() . "-" . $file->getClientOriginalName();
-            $file->storeAs('ringtones', $fileName);
-            $data['demo_file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
+            $fileName = uniqid() . "-" . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->storeAs('ringtones/demo', $fileName);
+            $data['demo_file'] = Storage::disk('public')->url("/ringtones/demo/" . $fileName);
         }
+
         $ringtone = Ringtone::firstOrCreate(
             $data
         );
@@ -82,17 +83,17 @@ class RingtoneController extends Controller
     public function update($id)
     {
         $ringtone = Ringtone::find($id);
-        $data = request()->except(['_token', 'file']);
+        $data = request()->except(['_token', 'file', 'demo_file']);
 
         $file = request()->file('file');
         if ($file != null) {
-            $fileName = uniqid() . "-" . $file->getClientOriginalName();
+            $fileName = uniqid() . "-" . str_replace(' ', '-', $file->getClientOriginalName());
             $file->storeAs('ringtones', $fileName);
             $data['file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
         }
         $file = request()->file('demo_file');
         if ($file != null) {
-            $fileName = uniqid() . "-" . $file->getClientOriginalName();
+            $fileName = uniqid() . "-" . str_replace(' ', '-', $file->getClientOriginalName());
             $file->storeAs('ringtones', $fileName);
             $data['demo_file'] = Storage::disk('public')->url("/ringtones/" . $fileName);
         }

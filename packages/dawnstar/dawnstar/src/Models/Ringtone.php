@@ -21,7 +21,8 @@ class Ringtone extends Model
         'download_count',
         'name',
         'slug',
-        'file'
+        'file',
+        'demo_file'
     ];
 
     public function category() {
