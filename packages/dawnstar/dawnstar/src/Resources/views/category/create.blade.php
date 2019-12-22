@@ -31,13 +31,13 @@
                                     <div class="col-8">
                                         <div class="custom-control-inline custom-radio custom-control-success custom-control-lg mb-1">
                                             <input type="radio" class="custom-control-input" id="active"
-                                                   name="status" value="1">
+                                                   name="status" value="1" checked>
                                             <label class="custom-control-label" for="active">Active</label>
                                         </div>
                                         <div
                                             class="custom-control-inline custom-radio custom-control-warning custom-control-lg mb-1">
                                             <input type="radio" class="custom-control-input" id="uncheck"
-                                                   name="status" value="2" checked>
+                                                   name="status" value="2" >
                                             <label class="custom-control-label" for="uncheck">Uncheck</label>
                                         </div>
                                         <div
@@ -65,10 +65,6 @@
                                 <div class="form-group">
                                     <label>Category Slug</label>
                                     <input type="text" class="form-control" id="category_slug" name="slug" autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label>Category Detail</label>
-                                    <textarea id="js-ckeditor" name="detail"></textarea>
                                 </div>
                             </div>
                         </div>

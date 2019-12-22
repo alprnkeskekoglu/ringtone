@@ -85,10 +85,6 @@
                                     <label>Category Slug</label>
                                     <input type="text" class="form-control" id="category_slug" name="slug" autocomplete="off" value="{!! $category->slug !!}">
                                 </div>
-                                <div class="form-group">
-                                    <label>Category Detail</label>
-                                    <textarea id="js-ckeditor" name="detail">{!! $category->detail !!}</textarea>
-                                </div>
                             </div>
                         </div>
                         <div class="form-group text-right">

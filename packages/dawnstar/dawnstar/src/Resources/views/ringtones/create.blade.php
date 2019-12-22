@@ -25,12 +25,29 @@
                         @csrf
                         <div class="row push">
                             <div class="col-lg-3 col-xl-4">
+                                <h4><b>Ringtone Demo File</b></h4>
+                                <div class="col-sm-6 col-lg-12">
+                                    <span id="btnDemoFile" style="cursor: pointer;">
+                                        <img src="{{ asset('vendor/dawnstar/media/music.png') }}"
+                                             alt="Ringtone File" class="card p-1"
+                                             style="width: 50%; margin-left: auto; margin-right: auto; border: 1px dashed black">
+                                    </span>
+                                    <label>
+                                        Dosya yüklemek için icon'a tıklayınız.
+                                    </label>
+                                    <div class="form-group" style="display: none">
+                                        <div class="custom-file ">
+                                            <input type="file" class="form-control" id="upload-demo-file"
+                                                   name="demo_file">
+                                        </div>
+                                    </div>
+                                </div>
                                 <h4><b>Ringtone File</b></h4>
                                 <div class="col-sm-6 col-lg-12">
                                     <span id="btnFile" style="cursor: pointer;">
                                         <img src="{{ asset('vendor/dawnstar/media/music.png') }}"
                                              alt="Ringtone File" class="card p-1"
-                                             style="width: 60%; margin-left: auto; margin-right: auto; border: 1px dashed black">
+                                             style="width: 50%; margin-left: auto; margin-right: auto; border: 1px dashed black">
                                     </span>
                                     <label>
                                     Dosya yüklemek için icon'a tıklayınız.
@@ -51,13 +68,13 @@
                                             <div
                                                 class="custom-control-inline custom-radio custom-control-success custom-control-lg mb-1">
                                                 <input type="radio" class="custom-control-input" id="active"
-                                                       name="status" value="1">
+                                                       name="status" value="1" checked>
                                                 <label class="custom-control-label" for="active">Active</label>
                                             </div>
                                             <div
                                                 class="custom-control-inline custom-radio custom-control-warning custom-control-lg mb-1">
                                                 <input type="radio" class="custom-control-input" id="uncheck"
-                                                       name="status" value="2" checked>
+                                                       name="status" value="2" >
                                                 <label class="custom-control-label" for="uncheck">Uncheck</label>
                                             </div>
                                             <div
@@ -169,6 +186,10 @@
 
         $('#btnFile').on('click', function () {
             $('#upload-file').trigger('click');
+        });
+
+        $('#btnDemoFile').on('click', function () {
+            $('#upload-demo-file').trigger('click');
         });
     </script>
 @endpush

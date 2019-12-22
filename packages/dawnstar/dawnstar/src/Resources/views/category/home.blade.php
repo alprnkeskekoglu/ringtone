@@ -28,8 +28,8 @@
                         <tr>
                             <th class="text-center" style="width: 5%;">#ID</th>
                             <th class="text-center" style="width: 5%;">Status</th>
+                            <th class="text-center">Parent Category</th>
                             <th class="text-center">Name</th>
-                            <th class="text-center">Detail</th>
                             <th class="d-none d-sm-table-cell text-center" style="width: 10%;">Created At</th>
                             <th class="d-none d-sm-table-cell text-center" style="width: 10%;">Updated At</th>
                             <th class="d-none d-sm-table-cell text-center" style="width: 10%;">Actions</th>
@@ -49,10 +49,10 @@
                                     @endif
                                 </td>
                                 <td class="font-w600 text-center">
-                                    <a href="#">{!! $data->name !!}</a>
+                                    {!! $data->parent ? $data->parent->name : "-" !!}
                                 </td>
                                 <td class="font-w600 text-center">
-                                    {!! Str::limit(strip_tags($data->detail), 80) !!}
+                                    <a href="#">{!! $data->name !!}</a>
                                 </td>
                                 <td class="font-w600 text-center d-none d-sm-table-cell">
                                     {!! $data->created_at !!}

@@ -19,7 +19,6 @@ class CreateCategoryTable extends Migration
             $table->enum('status', [1, 2, 3])->default(2);
             $table->string('name');
             $table->string('slug');
-            $table->text('detail');
             $table->timestamps();
             $table->softDeletes();
         });
