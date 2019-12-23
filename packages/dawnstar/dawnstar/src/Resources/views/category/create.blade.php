@@ -81,14 +81,6 @@
 @endsection
 
 @push('scripts')
-    <script src="{!! asset("vendor/dawnstar/js/plugins/ckeditor/ckeditor.js") !!}"></script>
-    <script>
-        jQuery(function () {
-            Dashmix.helpers(['ckeditor']);
-        });
-    </script>
-
-
     <script>
         $('#category_name').on('keyup', function() {
             $('#category_slug').val(slugify($(this).val()));

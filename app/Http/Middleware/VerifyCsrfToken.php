@@ -20,6 +20,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         "/ringtone-filter",
+        "/dawnstar/Report/filter",
         "/download"
     ];
 }

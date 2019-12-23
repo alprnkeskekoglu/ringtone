@@ -75,21 +75,10 @@ Route::name('panel.')->group(function () {
             });
         });
 
-        Route::prefix('Analytic')->name('analytic.')->group(function() {
-            Route::get('/', 'AnalyticController@index')->name('index');
-            Route::get('/{day}', 'AnalyticController@date')->name('day');
-
-        });
-
 
         Route::prefix('Report')->name('report.')->group(function () {
             Route::get('/', 'ReportController@index')->name('index');
-
-            Route::prefix('/{id}')->group(function () {
-                Route::get('/edit', 'ReportController@edit')->name('edit');
-                Route::post('/update', 'ReportController@update')->name('update');
-                Route::get('/delete', 'ReportController@delete')->name('delete');
-            });
+            Route::get('/filter', 'ReportController@index')->name('filter');
         });
     });
 

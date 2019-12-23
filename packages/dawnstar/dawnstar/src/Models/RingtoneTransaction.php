@@ -23,4 +23,9 @@ class RingtoneTransaction extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function getRingtoneCountAttribute()
+    {
+        return count(json_decode($this->ringtones, 1));
+    }
+
 }
