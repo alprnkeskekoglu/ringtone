@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Dawnstar\Models\Category;
 use Dawnstar\Models\Ringtone;
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
@@ -13,10 +14,10 @@ class CartController extends Controller
         $this->middleware('auth');
     }
 
-    public function index() {
+    public function index(Request $request) {
 
         $user = auth()->user();
-        $ringtone_id = request()->get('ringtone_id');
+        $ringtone_id = $request->get('ringtone_id');
         $key = $user->id . '_cart';
         $session = session()->get($key);
         $cart = $session ? json_decode(decrypt($session), 1) : [];
@@ -40,7 +41,7 @@ class CartController extends Controller
         return response()->json(['status' => $flag, 'view' => $view], 200);
     }
 
-    protected function getRingtones($ids) {
+    private function getRingtones($ids) {
 
         return Ringtone::whereIn('id', $ids)
             ->get();

@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Dawnstar\Models\Category;
 use Dawnstar\Models\Ringtone;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class RingtoneController extends Controller
 {
@@ -22,10 +21,10 @@ class RingtoneController extends Controller
         return view('web.ringtone.index', compact('categories', 'ringtones'));
     }
 
-    public function filter() {
-        $category_id = request()->get('category_id');
-        $type = request()->get('type');
-        $order = request()->get('order');
+    public function filter(Request $request) {
+        $category_id = $request->get('category_id');
+        $type = $request->get('type');
+        $order = $request->get('order');
 
         $ringtones = Ringtone::where('status', 1);
 
@@ -53,13 +52,18 @@ class RingtoneController extends Controller
         return view('web.ringtone.ajax', compact('ringtones'))->render();
     }
 
-    public function download() {
-        $ringtone_id = request()->get('ringtone_id');
+    public function download(Request $request) {
+        $ringtone_id = $request->get('ringtone_id');
 
-        $rintone = Ringtone::find($ringtone_id);
+        $ringtone = Ringtone::find($ringtone_id);
 
-        $rintone->download_count ++;
-        $rintone->save();
+        if($ringtone) {
+            $ringtone->download_count ++;
+            $ringtone->save();
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false]);
+        }
     }
 
 }

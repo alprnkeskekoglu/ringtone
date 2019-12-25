@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Dawnstar\Models\Category;
 use Dawnstar\Models\CreditTransaction;
 use Dawnstar\Models\Ringtone;
+use Illuminate\Http\Request;
 
 class CreditController extends Controller
 {
@@ -19,8 +20,8 @@ class CreditController extends Controller
         return view('web.credit');
     }
 
-    public function credit() {
-        $credit = request()->get('credit');
+    public function credit(Request $request) {
+        $credit = $request->get('credit');
         $user = auth()->user();
 
 
@@ -33,6 +34,7 @@ class CreditController extends Controller
         $user->credit += $credit;
         $user->save();
 
+        return response()->json(['status' => true]);
     }
 
 }

@@ -16,7 +16,8 @@ class SearchController extends Controller
             ->where(function($q) use($query) {
                 $q->where('name', 'like', '%'.$query.'%')
                     ->orWhere('file', 'like', '%'.$query.'%');
-            })->orderByRaw("case
+            })
+            ->orderByRaw("case
                 when `name` like ? then 1
                 when `name` like ? then 4
                 when `name` like ? then 2
@@ -55,7 +56,6 @@ class SearchController extends Controller
                 '%' . $query . '',          //20
 
             ])->paginate(16, ["*"], 'p');
-
 
         return view('web.search', compact('ringtones'));
     }
