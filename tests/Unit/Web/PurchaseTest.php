@@ -27,11 +27,9 @@ class PurchaseTest extends TestCase
 
 
         //Purchase function
-
         $index = $controller->purchase();
 
         $session = session()->get('1_cart');
-        $this->isNull($session);
         $this->assertEquals(null, $session);
         $this->assertTrue($index->isSuccessful());
         $this->assertEquals(200, $index->getStatusCode());
