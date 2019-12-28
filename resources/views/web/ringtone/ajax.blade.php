@@ -2,7 +2,7 @@
     @foreach($ringtones as $ringtone)
         <li class="stopped">
             <audio class="audio">
-                <source src="{!! asset($ringtone->file) !!}" type="audio/mpeg">
+                <source src="{!! asset($ringtone->demo_file) !!}" type="audio/mpeg">
             </audio>
             <i class="fa fa-play-circle play-button"></i>
             <span class="small text-primary">{!! $ringtone->type_string !!}</span>

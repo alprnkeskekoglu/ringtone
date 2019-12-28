@@ -51,7 +51,7 @@
                                 @foreach($popularities as $popular)
                                     <li class="stopped">
                                         <audio class="audio">
-                                            <source src="{!! asset($popular->file) !!}" type="audio/mpeg">
+                                            <source src="{!! asset($popular->demo_file) !!}" type="audio/mpeg">
                                         </audio>
                                         <i class="fa fa-play-circle play-button"></i>
                                         <span class="small text-primary">{!! $popular->type_string !!}</span>
@@ -75,7 +75,7 @@
                                 @foreach($newest as $new)
                                     <li class="stopped">
                                         <audio class="audio">
-                                            <source src="{!! asset($new->file) !!}" type="audio/mpeg">
+                                            <source src="{!! asset($new->demo_file) !!}" type="audio/mpeg">
                                         </audio>
                                         <i class="fa fa-play-circle play-button"></i>
                                         <span class="small text-primary">{!! $new->type_string !!}</span>
@@ -101,7 +101,7 @@
                                 @foreach($prices as $price)
                                     <li class="stopped">
                                         <audio class="audio">
-                                            <source src="{!! asset($price->file) !!}" type="audio/mpeg">
+                                            <source src="{!! asset($price->demo_file) !!}" type="audio/mpeg">
                                         </audio>
                                         <i class="fa fa-play-circle play-button"></i>
                                         <span class="small text-primary">{!! $price->type_string !!}</span>
