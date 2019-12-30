@@ -11,19 +11,19 @@
                             <em>Where we are?</em>
                             <ul>
                                 <li>
-                                    <span>A:</span><p style="display: inline-block">Pelitli Mah. 4417 Sk. No: 9 Gebze/Kocaeli</p>
+                                    <span>A:</span><p style="display: inline-block">Muradiye Mah.Celal Bayar Üniversitesi Kampüsü, Yunusemre/Manisa</p>
                                 </li>
                                 <li>
-                                    <span>T:</span><a href="tel:+902627511888">+90 262 751 1888</a>
+                                    <span>T:</span><a href="tel:+902361231212">+90 236 123 12 12</a>
                                 </li>
                                 <li>
-                                    <span>F:</span>+90 262 751 1869
+                                    <span>F:</span>+90 236 321 32 32
                                 </li>
                                 <li>
-                                    <span>M:</span><a href="mailto:info@gloreglass.com">info@gloreglass.com</a>
+                                    <span>M:</span><a href="mailto:info@gloreglass.com">info@naturing.com</a>
                                 </li>
                                 <li>
-                                    <span>M:</span><a href="mailto:export@gloreglass.com">export@gloreglass.com</a>
+                                    <span>M:</span><a href="mailto:export@gloreglass.com">export@naturing.com</a>
                                 </li>
                             </ul>
                         </div>

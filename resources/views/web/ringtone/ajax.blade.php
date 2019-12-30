@@ -14,7 +14,7 @@
                     <i class="fa fa-check-circle float-right"></i>
                 @else
                 <i class="fa fa-shopping-basket float-right cart-button"
-                   style="{{ in_array($ringtone->id, $cart) ? 'color: #22bd4c' : 'color: #e41443' }}"
+                   style="{{ (isset($cart) && in_array($ringtone->id, $cart)) ? 'color: #22bd4c' : 'color: #e41443' }}"
                    data-id="{!! $ringtone->id !!}"></i>
                 @endif
             @endauth
