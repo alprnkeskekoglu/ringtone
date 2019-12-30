@@ -13,9 +13,9 @@
 @section('content')
     <main id="main-container" style="background: white">
 
-        <div class="bg-video" data-vide-bg="{!! asset("assets/media/videos/tunnel") !!}"
+        <div class="bg-video" data-vide-bg="{!! asset("assets/media/videos/forest") !!}"
              data-vide-options="posterType: jpg">
-            <div class="hero bg-black-75">
+            <div class="hero">
                 <div class="hero-inner">
                     <div class="content content-full text-center">
                         <h1 class="display-4 font-w700 text-white mb-3 invisible" data-toggle="appear"
@@ -23,7 +23,7 @@
                             Natu<span class="text-primary-light">ring</span>
                         </h1>
                         <h2 class="font-w300 text-white-75 mb-5 invisible" data-toggle="appear"
-                            data-class="animated fadeInUp" data-timeout="400">Building your idea is a journey.</h2>
+                            data-class="animated fadeInUp" data-timeout="400">Sounds from the nature.</h2>
                     </div>
                 </div>
             </div>

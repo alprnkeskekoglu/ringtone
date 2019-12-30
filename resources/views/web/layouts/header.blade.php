@@ -5,9 +5,7 @@
         <div>
 
             <a class="link-fx font-w600 font-size-lg text-white" href="{!! route('home') !!}">
-                            <span class="smini-hidden">
-                                <span class="text-white-75">N</span><span class="text-white">r</span>
-                            </span>
+
                 <span class="smini-hidden">
                                 <span class="text-white">Natu</span><span class="text-white-75">ring</span>
                             </span>
