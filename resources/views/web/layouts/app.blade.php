@@ -51,8 +51,7 @@
 <script src="{!! asset("assets/js/be_comp_dialogs.min.js") !!}"></script>
 
 <script>
-    $('.music-list li i.play-button').on('click', function () {
-
+    $(document).delegate('.music-list li i.play-button, 'click', function () {
         var obj = $(this).parent('li');
 
         if(obj.hasClass('listen')) {
